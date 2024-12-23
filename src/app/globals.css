@@ -82,8 +82,13 @@ body {
 
 #clr1{
   color: rgba(253, 117, 112, 0.687);
+  font-family: "Pacifico", serif;
 }
 #clr2{
+  color: rgb(209, 112, 112);
+  font-family: "Pacifico", serif;
+}
+#icon{
   color: rgb(209, 112, 112);
 }
 
@@ -107,3 +112,9 @@ color: white;
  transition: all ease-in-out;
  
 }
+@keyframes text { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } } 
+#blink { 
+  font-size: 24px; font-weight: bold; animation: text 1s infinite; }
+
+
+  

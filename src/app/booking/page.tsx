@@ -23,7 +23,7 @@ export default function Booking() {
 <div  className='-mt-20 md:mt-10 lg:mt-2 xl:mt-5 '>
 <h1 className=' mt-0 lg:mt-12 text-center font-bold text-xl md:text-2xl lg:text-4xl 2xl:text-8xl font-serif 2xl:mt-20'>
   Book A Table Online</h1>
-<div className='grid grid-cols-2 m-2 md:m-5 gap-2 md:gap-1 2xl:mx-16 lg:gap-7 xl:mt-14 2xl:gap-20'>
+<div className='grid grid-cols-2 m-2 md:m-5 gap-2 md:gap-1 2xl:mx-16 lg:gap-7 xl:gap-5 xl:mt-8 2xl:gap-20'>
 
 <input type="text" placeholder='Your Name' 
 className='p-3 xl:p-5 2xl:p-10 border rounded-sm border-red-300 shadow-md'/>
@@ -45,7 +45,7 @@ className='col-span-2 p-3 xl:p-5 border rounded-sm border-red-300 shadow-md'></t
  
  <button className='col-span-2 bg-rose-500 text-white p-5 md:p-3 lg:p-4 xl:p-6 2xl:text-2xl 2xl:p-10 border rounded-sm border-red-300 shadow-md' >
   <Link href='/'>BACK TO HOME</Link></button>
-  
+
 </div>
 </div>
 

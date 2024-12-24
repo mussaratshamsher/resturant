@@ -143,6 +143,7 @@ export default function Blogs() {
 <Image src={menu6} alt='' width={100} height={100} className='scale-100 transition-all duration-300 hover:scale-90 2xl:w-96'/>
 </div>
 
+
 </div>
    
     </div>

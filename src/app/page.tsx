@@ -8,6 +8,8 @@ import { Button } from '@/components/ui/button'
 import About from './about/page'
 import Services from './services/page'
 import Menu from './menu/page'
+import Link from 'next/link'
+import Booking from './booking/page'
 
 export default function page() {
   return (
@@ -24,8 +26,8 @@ export default function page() {
 <div className='absolute text-gray-200  2xl:text-4xl 2xl:top-[600px] md:top-96 top-28 ml-8 mt-10 md:text-2xl text-1xl font-semibold'>
 <h1>Unleashing Mouthwatering Delights Daily!<br /> 
 Where Flavor Meets Passion!"</h1> <br />
-<div className='md:ml-40 ml-20'>
-<Button variant={'outline'}> BOOK NOW</Button></div>
+<div className='md:ml-40 ml-20'> <Link href='/booking'>
+<Button variant={'outline'}> BOOK NOW</Button></Link></div>
   <br /> 
 </div>
 
@@ -48,7 +50,8 @@ xl:w-[450px] xl:h-[450px] md:w-[400] md:h-[400] w-[250px] h-[250px] top-[300px] 
 
 <Menu />
 
-{/* blogs */}
+{/* reservation  */}
+<Booking />
 
 
 

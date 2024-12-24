@@ -36,15 +36,19 @@ const blogs = [
 
 export default function Blogs() {
   return (
-    <div>
+    <div className='maindiv'>
     <h1 className='my-2 md:my-5 2xl:my-10 text-center text-md md:text-2xl 
     lg:text-4xl 2xl:text-8xl 2xl:mt-28 2xl:mb-28 font-bold ' id='clr2'>Read Our Blogs</h1>
-    <div className="grid grid-cols-3 lg:grid-cols-3 mt-3 md:mt-5 lg:mt-10 lg:ml-20 lg:mr-20 lg:gap-20 2xl:ml-96 2xl:mr-96">
+   
+    {/* grid layout  */}
+    <div className=" md:mb-5 grid grid-cols-3 lg:grid-cols-3 mt-3 md:mt-5 lg:mt-10 lg:ml-20 lg:mr-20 lg:gap-20 2xl:ml-96 2xl:mr-96">
    {/* grid 1 */}
     <div className="col-span-2 lg:col-span-2 ml-2 md:ml-5 lg:ml-10 mr-2 lg:mr-5">
 
         {blogs.map((blg) => (
+            <div key={blg.id}>
     <Link href={`/blogsdetail/${blg.id}`}>
+
 <Image src={blg.image} alt="" width={500} height={500} className='xl:w-[700px] xl:h-72 hover:opacity-80'/>
 <div className="flex flex-col md:flex-row gap-2 md:gap-10">
     <h1 className="text:sm lg:text-xl">Posted By: <b>Miller</b></h1>
@@ -56,13 +60,11 @@ export default function Blogs() {
 <h2 className='text-xs font-thin md:text-lg p-1 md:p-2 lg:p-3 2xl:p-4'>{blg.description} 
     <Button variant={'ghost'}>Read more....</Button>
 </h2>
-{/* <div className='flex flex-row gap-2 p-2'>
-    <div><LikeBlogs /></div>
-    <div> <CommentSection /></div>
-   </div> */}
-    </Link>           
+    </Link>
+     </div>          
         ))}                        
-    </div>
+    
+</div>
 
     {/* grid 2  */}
 <div className='border-l-2 border-gray-400'>
@@ -113,7 +115,7 @@ export default function Blogs() {
            </div> 
           </div>
           {/* Popular Tags  */}
-          <h1 className='pt-4 pb-2 text-xs md:text-sm lg:text-xl text-center underline lg:mt-20 lg:mb-5' id='clr2'>Popular Tags</h1>
+          <h1 className='pt-4 pb-2 text-xs md:text-sm lg:text-xl text-center underline md:mt-10 lg:mt-20 lg:mb-5' id='clr2'>Popular Tags</h1>
 
 <div className='grid grid-cols-1 md:grid-cols-3 lg:gap-2 gap-1 2xl:gap-5 xl:ml-10'>
 <p className='border shadow-sm p-1 md:p-2 hover:bg-red-300'>Sandwich </p>
@@ -131,7 +133,7 @@ export default function Blogs() {
  </div>
 
 {/* Photo Gallery  */}
-<h1 className='pt-4 pb-2 text-xs md:text-sm lg:text-xl text-center underline lg:mt-20 lg:mb-5' id='clr2'>Gallery</h1>
+<h1 className='pt-4 pb-2 text-xs md:text-sm lg:text-xl text-center underline md:mt-10 lg:mt-20 lg:mb-5' id='clr2'>Gallery</h1>
 <div className='grid grid-cols-3 grid-rows-2 gap-1 mt-2 md:mt-7 lg:ml-10 border shadow-sm p-2'>
 <Image src={menu1} alt='' width={100} height={100} className='scale-100 transition-all duration-300 hover:scale-90 2xl:w-96'/>
 <Image src={menu3} alt='' width={100} height={100} className='scale-100 transition-all duration-300 hover:scale-90 2xl:w-96'/>
@@ -142,9 +144,12 @@ export default function Blogs() {
 </div>
 
 </div>
+   
     </div>
+
+
     </div>
-  )
+  );
 }
 
 

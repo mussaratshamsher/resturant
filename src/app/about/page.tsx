@@ -13,6 +13,7 @@ import team4 from '../../../public/img/team4.jpg'
 
 import { Button } from "@/components/ui/button"
 import { Facebook, Instagram, Twitter } from 'lucide-react'
+import Link from 'next/link'
 
 
 
@@ -60,8 +61,8 @@ Join me as we explore the endless possibilities of flavor and celebrate the joy 
 </div>
 
 </div>
-
-<Button variant={'outline'}>Read More</Button>
+<Link href='/about'>
+<Button variant={'outline'}>Read More</Button></Link>
 
 </div>
 

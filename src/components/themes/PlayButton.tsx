@@ -1,19 +1,26 @@
 'use client'  
-// components/PlayButton.js  
+// components/PlayButton.tsx  
 import { useRef, useState } from 'react';  
 
-const PlayButton = ({ src }) => {  
-    const videoRef = useRef(null);  
-    const [isHovered, setIsHovered] = useState(false); // State to track hover status  
-    const [isPlaying, setIsPlaying] = useState(false); // State to track if video is playing  
+// Define the props type  
+interface PlayButtonProps {  
+    src: string; // Type for the video source  
+}  
+
+const PlayButton: React.FC<PlayButtonProps> = ({ src }) => {  
+    const videoRef = useRef<HTMLVideoElement | null>(null);  
+    const [isHovered, setIsHovered] = useState<boolean>(false); // State to track hover status  
+    const [isPlaying, setIsPlaying] = useState<boolean>(false); // State to track if video is playing  
 
     const handlePlayButtonClick = () => {  
-        if (videoRef.current.paused) {  
-            videoRef.current.play();  
-            setIsPlaying(true); // Update playing state  
-        } else {  
-            videoRef.current.pause();  
-            setIsPlaying(false); // Update playing state  
+        if (videoRef.current) { // Check if videoRef.current is not null  
+            if (videoRef.current.paused) {  
+                videoRef.current.play();  
+                setIsPlaying(true); // Update playing state  
+            } else {  
+                videoRef.current.pause();  
+                setIsPlaying(false); // Update playing state  
+            }  
         }  
     };  
 
